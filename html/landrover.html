@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
  <head>
-<!--     <noscript>
-        <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br />자바스크립트의 기능을 활성화 해주세요</p>
-        <p><a target="_blank" href="http://enable-javascript.com/ko"></a>자바스크립트 활성화 처리하기</p>
-    </noscript> -->
 
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +21,11 @@
    <title>landrover</title>
  </head>
  <body>
+   <!--     <noscript>
+        <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br />자바스크립트의 기능을 활성화 해주세요</p>
+        <p><a target="_blank" href="http://enable-javascript.com/ko"></a>자바스크립트 활성화 처리하기</p>
+    </noscript> -->
+
   <div id="wrap">
     <header id="headBox"></header>
     <main id="contentBox">
@@ -37,7 +38,7 @@
                       더욱 강력한 가솔린 모델을 <br/>지금 가까운 전시장에서 만나보세요</h3>
                   <div class="lineup white_btn"><a href="#"><p>라인업 살펴보기</p></a></div>
                 </div> 
-                <video id="videoBg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="../media/view_04_poster.jpg">
+                <video id="videoBg" preload="auto" autoplay loop="loop" muted="muted" poster="../media/view_04_poster.jpg">
                   <source src="../media/view_video.mp4" type="video/mp4">
                 </video>
               </li>
@@ -100,8 +101,8 @@
       <article id="productBox">
         <div class="product_area">
         <div class="pb_btn">
-          <button type="button" class="prev"><div></div><span class="hidden">prev</span></button>
-          <button type="button" class="next"><div></div><span class="hidden">next</span></button>
+          <button type="button" class="prev"><span></span><span class="hidden">prev</span></button>
+          <button type="button" class="next"><span></span><span class="hidden">next</span></button>
         </div>
         <ul class="pd_slide">
         <li>
@@ -206,8 +207,8 @@
       </aside>
       <article id="exploreBox">
         <div class="ex_btn">
-            <button type="button" class="prev"><div></div><span class="hidden">prev</span></button>
-            <button type="button" class="next"><div></div><span class="hidden">next</span></button>
+            <button type="button" class="prev"><span></span></button>
+            <button type="button" class="next"><span></span></button>
         </div>
         <ul class="explore_slide">
           <li>

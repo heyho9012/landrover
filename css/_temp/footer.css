@@ -1,0 +1,29 @@
+#footBox { position: relative; width: 100vw; color: #1d1d1d; }
+
+#footBox .sns li { background-repeat: no-repeat; background-position: 0 0; background-size: contain; }
+
+#footBox .sns li:nth-child(1) { background-image: url("../img/sns_logo/sns_logo_01.png"); }
+
+#footBox .sns li:nth-child(2) { background-image: url("../img/sns_logo/sns_logo_02.png"); }
+
+#footBox .sns li:nth-child(3) { background-image: url("../img/sns_logo/sns_logo_03.png"); }
+
+#footBox .sns li a { display: block; width: 100%; height: 100%; }
+
+#footBox .sns li a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+
+#footBox a { color: #1d1d1d; }
+
+#footBox dt a:hover { font-weight: bold; color: #02512D; text-decoration: underline; }
+
+#footBox dd a:hover { color: #02512D; font-weight: bold; text-decoration: underline; }
+
+#footBox li { text-align: center; }
+
+#footBox li a:hover { color: #02512D; font-weight: bold; text-decoration: underline; }
+
+#contentBox .view_btn li.action { border: 2px solid #f89626; background-color: #f89626; }
+
+button div { transition: all 0.5s ease; }
+
+button div:hover { transform: scale(2); }

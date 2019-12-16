@@ -1,0 +1,45 @@
+@import "../_basic/mixin"; // mixin -------------------------------
+// common -----------------------------
+body{text-transform:uppercase;}
+#wrap,main,aside{width:100%;min-width:360px;height:auto;margin:auto;overflow-x:hidden;}
+article{width:100%;height:100vh;}
+#headBox.action{height:60px;padding-top:10px;background-color:rgba(11, 13, 16,0.8);}
+#headBox{position:fixed;z-index:2000;width:100%;box-sizing:border-box;color:#fff;transition:all 1s ease;
+  .nav{position:relative;width:100%;height:100%;margin:auto;
+    h1{float:left;@include bg("../img/logo.png",0,0,contain);
+      & a{@include link;}
+    }
+    .unb{float:right;
+        li{float:left;
+          &:nth-child(2){position:relative;
+            label{display:block;width:100%;height:100%;@include bg("../img/search.png",0,0);cursor: pointer;}
+            a{display:none;width:100%;height:100%;@include center;bottom:-62px;
+              i{color:#f89626;font-size:1rem;}
+            }
+            input{display:none;float:right;width:280px;height:34px;margin-top:28px;cursor:text;}
+          }
+          &:nth-child(3){float:right;margin-top:4px;}
+            a{@include link;}
+      }
+    }
+    // menu_icon
+    .menu_icon{position:absolute;background-color:transparent;padding:0;
+      span{display:block;position:absolute;border-radius:1px;cursor:pointer;background-color:#fff;transition:all .35s ease;}
+      span:nth-child(1){top:2px;}
+      span:nth-child(2){top:50%;transform:translateY(-50%);}
+      span:nth-child(3){bottom:2px;}
+      &.click span:nth-child(1){top:50%;transform:rotate(45deg)translateY(-50%);}
+      &.click span:nth-child(2){opacity:0;}
+      &.click span:nth-child(3){top:50%;transform:translateY(-50%)rotate(-45deg);}
+    }
+    .menu_page{display:none;position:fixed;z-index:-1;top:0;left:0;width:100vw;height:100vh;background-color:#1d1d1d;
+      ul{@include center;height:auto;
+        li{width:auto;height:auto;
+          a{@include link;color:#fff;font-size:1rem;text-align:center;transition:all 0.2s linear;}
+        }
+      }
+      & a:hover{color:#f89626;transform:scale(1.2);}
+    }
+  }
+  
+}

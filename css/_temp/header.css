@@ -1,0 +1,65 @@
+body { text-transform: uppercase; }
+
+#wrap, main, aside { width: 100%; min-width: 360px; height: auto; margin: auto; overflow-x: hidden; }
+
+article { width: 100%; height: 100vh; }
+
+#headBox.action { height: 60px; padding-top: 10px; background-color: rgba(11, 13, 16, 0.8); }
+
+#headBox { position: fixed; z-index: 2000; width: 100%; box-sizing: border-box; color: #fff; transition: all 1s ease; }
+
+#headBox .nav { position: relative; width: 100%; height: 100%; margin: auto; }
+
+#headBox .nav h1 { float: left; background-image: url("../img/logo.png"); background-size: contain; background-repeat: no-repeat; background-position: 0 0; }
+
+#headBox .nav h1 a { display: block; width: 100%; height: 100%; }
+
+#headBox .nav h1 a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+
+#headBox .nav .unb { float: right; }
+
+#headBox .nav .unb li { float: left; }
+
+#headBox .nav .unb li:nth-child(2) { position: relative; }
+
+#headBox .nav .unb li:nth-child(2) label { display: block; width: 100%; height: 100%; background-image: url("../img/search.png"); background-size: cover; background-repeat: no-repeat; background-position: 0 0; cursor: pointer; }
+
+#headBox .nav .unb li:nth-child(2) a { display: none; width: 100%; height: 100%; position: absolute; left: 50%; transform: translateX(-50%); text-align: center; bottom: -62px; }
+
+#headBox .nav .unb li:nth-child(2) a i { color: #f89626; font-size: 1rem; }
+
+#headBox .nav .unb li:nth-child(2) input { display: none; float: right; width: 280px; height: 34px; margin-top: 28px; cursor: text; }
+
+#headBox .nav .unb li:nth-child(3) { float: right; margin-top: 4px; }
+
+#headBox .nav .unb li a { display: block; width: 100%; height: 100%; }
+
+#headBox .nav .unb li a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+
+#headBox .nav .menu_icon { position: absolute; background-color: transparent; padding: 0; }
+
+#headBox .nav .menu_icon span { display: block; position: absolute; border-radius: 1px; cursor: pointer; background-color: #fff; transition: all .35s ease; }
+
+#headBox .nav .menu_icon span:nth-child(1) { top: 2px; }
+
+#headBox .nav .menu_icon span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+
+#headBox .nav .menu_icon span:nth-child(3) { bottom: 2px; }
+
+#headBox .nav .menu_icon.click span:nth-child(1) { top: 50%; transform: rotate(45deg) translateY(-50%); }
+
+#headBox .nav .menu_icon.click span:nth-child(2) { opacity: 0; }
+
+#headBox .nav .menu_icon.click span:nth-child(3) { top: 50%; transform: translateY(-50%) rotate(-45deg); }
+
+#headBox .nav .menu_page { display: none; position: fixed; z-index: -1; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #1d1d1d; }
+
+#headBox .nav .menu_page ul { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; height: auto; }
+
+#headBox .nav .menu_page ul li { width: auto; height: auto; }
+
+#headBox .nav .menu_page ul li a { display: block; width: 100%; height: 100%; color: #fff; font-size: 1rem; text-align: center; transition: all 0.2s linear; }
+
+#headBox .nav .menu_page ul li a > span { position: absolute; z-index: -1; display: block; width: 0; height: 0; overflow: hidden; }
+
+#headBox .nav .menu_page a:hover { color: #f89626; transform: scale(1.2); }

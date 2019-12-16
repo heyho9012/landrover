@@ -1,0 +1,18 @@
+@import "../_basic/mixin"; // mixin -------------------------------
+#footBox{position:relative;width:100vw;color:#1d1d1d;
+  .sns{
+    li{background-repeat:no-repeat;background-position:0 0;background-size:contain;
+      @for $i from 1 to 4 {&:nth-child(#{$i}){background-image:url("../img/sns_logo/sns_logo_0"+$i+".png")}}
+      a{@include link;}
+    }
+  }
+  a{color:#1d1d1d;}
+  dt a:hover{font-weight:bold;color:#02512D;text-decoration:underline;}
+  dd a:hover{color:#02512D;font-weight:bold;text-decoration:underline;}
+  li{text-align: center;}
+  li a:hover{color:#02512D;font-weight:bold;text-decoration:underline;}
+}
+#contentBox .view_btn li.action{border:2px solid #f89626;background-color: #f89626};
+button div{transition:all 0.5s ease;
+  &:hover{transform:scale(2);}
+}

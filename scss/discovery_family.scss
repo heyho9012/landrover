@@ -1,0 +1,157 @@
+// rangerover_family.scss
+/* rangerover_family.css */
+
+@import "_temp/header";
+@import "_temp/footer";
+@import "_temp/head_foot";
+// -------------------------------------------------------------
+@import "_temp/_sub_fdiscovery_pc1920";
+// -------------------------------------------------------------
+@import "_basic/mixin"; // mixin -------------------------------
+
+
+article{width:100%;box-sizing:border-box;}
+#contentBox{width:100%;height:auto;}
+#headBox.action{height:60px;padding-top:10px;background-color:rgba(11, 13, 16,0.5);}
+#viewBox{position:relative;min-height:640px;
+  &:before,&::before{content:"";display:block;position:absolute;z-index:500;width:100%;height:100%;background-color:rgba(29,29,29,0.5);}
+  $count:3;
+  ul{position:relative;width:100%*$count;height:100%;
+    li{float:left;width:100%/$count;height:100%;background-size:cover;background-repeat:no-repeat;background-position:70% 0;overflow:hidden;word-break:break-all;
+      .view_text{position:absolute;z-index:1000;color:#fff;}
+      .videoBg{position:absolute;z-index:-500;background-position: 50% 50%;}
+    }
+    @for $i from 2 to 4 {.view_0#{$i}_bg{background-image:url("../img/sub_fdiscovery/view/view_0"+$i+".jpg")}}
+  }
+  .lineup{@include lineup;}
+  @include indicator_square(".view_btn_area");
+}
+// viewBox -----------------------------------------------------------------------------
+#specBox{background-color:#060606;color:#fff;.lineup{@include lineup;}
+  .fix_menu{position:fixed;z-index:2000;
+    li:hover{a{color:#f89626;}div{background-color:#f89626;}}
+    a{@include link;}
+  }
+  @include spec_list_01;
+  .list_02{
+    dl{float:left;width:25%;height:100%;text-align:center;
+      dt{width:100%;height:auto;a{@include link;color:#fff;}
+        &:hover{a{color:#02512D;}&+dd{color:#02512D;}
+      }
+    }
+      dd{width:100%;height:auto;}
+    }
+  }
+  h2{text-align:center;border-bottom:1px solid #fff;}
+  .list_03{width:70%;margin:auto;
+    .spec_img{width:48%;margin-right:4%;
+      li{position:relative;width:100%;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;
+        a{position:absolute;@include link;
+          i{@include img_cen;color:#fff;text-align:center;}
+        }
+        &:hover{&:before{background-color:rgba(0,0,0,0)}}
+        @include beforeBox;
+      }
+      @for $i from 1 to 4 {li:nth-child(#{$i}){background-image:url("../img/sub_fdiscovery/spec/spec_0"+$i+".jpg")}}
+    }
+    .spec_text{width:48%;}
+  }
+}
+// specBox -----------------------------------------------------------------------------
+#designBox{position:relative;color:#1d1d1d;@include bg("../img/sub_fdiscovery/design/design_00.jpg",50%,50%);
+  @include vertical_h2;
+  @include list_01(35%,#1d1d1d,#02512D);
+  .lineup{@include lineup_black;}
+}
+// designBox -----------------------------------------------------------------------------
+#purposeBox{position:relative;
+  @include vertical_h2;
+  #purpose_area_01{position:relative;width:100%;height:50%;@include bg("../img/sub_fdiscovery/purpose/purpose_01.jpg",50%,50%,contain);
+  .bag_img{@include bg("../img/sub_fdiscovery/purpose/seat_5.jpg",50%,50%);}
+  .list_down{
+    li{float:left;width:15%;height:auto;margin-right:2%;
+      & a{transition:all 0.8s ease;}
+      &:nth-child(3) a{color:#02512D;border-bottom:2px solid #02512D;}
+      &:last-child{margin-right:0;}
+      a{@include link;
+        &:hover{color:#02512D;border-bottom:2px solid #02512D;}
+      }
+    }
+  }
+  }
+  #purpose_area_02{position:relative;width:100%;height:50%;
+    >P{width:100%;height:auto;text-align:center;font-size:0.625rem;}
+    @include list_01(37.6%,#1d1d1d,#02512D);
+    .purpose_img_02{width:77.5%;height:76.5%;@include img_cen;@include bg("../img/sub_fdiscovery/purpose/purpose_02.jpg",50%,50%);
+      @include beforeBox;
+    }
+  }
+  .purpuse_text_02{color:#fff;
+    .lineup{@include lineup;}
+  }
+}
+// purposeBox -----------------------------------------------------------------------------
+#techBox{position:relative;background-color:#060606;color:#fff;
+  h2{position:absolute;z-index:100;transform-origin: left top;border-bottom:2px solid #fff;transform:rotate(90deg);box-sizing:border-box;}
+  @include list_01(26%,#fff);
+  .lineup{@include lineup;}
+  .tech_img{width:77.5%;height:76.5%;@include img_cen;@include bg("../img/sub_fdiscovery/tech/tech_01.jpg",50%,50%);
+    @include beforeBox;
+  }
+}
+// techBox -----------------------------------------------------------------------------
+
+#perf_01_Box{position:relative;
+  @include bg("../img/sub_frangerover/per/per_01.png",50%,50%,contain);
+  @include list_01(42.8%,#1d1d1d);
+  @include vertical_h2;
+  .lineup{@include lineup_black;}
+  .list_01{
+    ul{height:auto;margin:auto;
+      li{float:left;}
+    }
+  }
+}
+// perf_01_Box -----------------------------------------------------------------------------
+#offloadBox{position:relative;
+  @include bg("../img/sub_frangerover/off/off_01.png",50%,50%);
+  @include list_01(32.8%,#1d1d1d,#02512D);
+  @include vertical_h2;
+  .lineup{@include lineup_black;background-color:#1d1d1d;a{color:#fff;}}
+}
+// perf_02_Box -----------------------------------------------------------------------------
+  #modelBox{position:relative;.lineup{@include lineup;}
+  @include vertical_h2(#fff);
+    .model_area_01{position:absolute;top:0;width:100%;height:50%;background-color:#060606;color:#fff;box-sizing:border-box;
+    @include list_01(19.2%);
+    .model_list_01{width:84.6%;
+      >ul{width:100%;height:auto;
+        >li{float:left;width:30%;margin-right:5%;
+          &:nth-child(2){
+            >p{margin:auto;text-align:center;}
+          }
+          &:last-child{margin-right:0;}
+         
+        }
+      }
+      ul:last-child{margin-right:0;}
+      .model_list_02{position:relative;text-align:center;
+        li:first-child{width:100%;background-repeat:no-repeat;background-size:100% auto;background-position:50% 50%;}
+        @for $i from 1 to 4 {.model_0#{$i}_img{background-image:url("../img/sub_frangerover/model/model_0"+$i+".png");}}
+        li:nth-child(3){float:left;width:50%;height:auto;padding-right:10px;box-sizing:border-box;.lineup{float:right;}}
+        li:nth-child(4){float:left;width:50%;height:auto;padding-left:10px;box-sizing:border-box;.lineup{float:left;background-color:#fff;a{color:#1d1d1d;font-weight:bold;}}}
+      }
+    }
+  }
+  .model_area_02{position:absolute;top:1080px;width:100%;height:50%;.lineup{@include lineup_black;}
+    @include bg("../img/sub_frangerover/model/ace_01.png",50%,50%);
+    a{@include link;
+      i{@include img_cen;color:#fff;}
+    }
+  }
+}
+// modelBox -----------------------------------------------------------------------------
+@include mobile;
+@include ipadmini;
+@include pc_default;
+@include pc_full;

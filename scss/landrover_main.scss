@@ -1,0 +1,129 @@
+// landrover_main.scss
+/* landrover_main.css */
+@import "_temp/mobile";
+@import "_temp/ipadmini";
+@import "_temp/pcdefault";
+@import "_temp/pc1920";
+// -------------------------------------------------------------
+@import "_temp/header";
+@import "_temp/footer";
+// -------------------------------------------------------------
+@import "_basic/mixin"; // mixin -------------------------------
+
+
+
+#viewBox{position:relative;min-height:640px;
+  &:before,&::before{content:"";display:block;position:absolute;z-index:500;width:100%;height:100%;background-color:rgba(29,29,29,0.5);}
+  $count:5;
+  ul{position:relative;width:100%*$count;height:100%;
+    li{float:left;width:100%/$count;height:100%;background-size:cover;background-repeat:no-repeat;background-position:70% 0;overflow:hidden;word-break:break-all;
+      .view_text{position:absolute;z-index:1000;color:#fff;}
+      .videoBg{position:absolute;z-index:-500;background-position: 50% 50%;}
+    }
+    @for $i from 1 to 4 {.view_0#{$i+1}_bg{background-image:url("../img/view/view_0"+$i+".png")}}
+  }
+  .lineup{@include lineup;}
+  @include indicator_square(".view_btn_area");
+}
+#familyBox{color:#fff;
+  .family_area_01{position:relative;width:100vw;height:100vh;@include bg("../img/family/background_family.png",20%,70%);
+    &:before,&::before{content:"";display:block;position:absolute;z-index:-100;width:100%;height:120%;background-color:#0b0d10;}
+    .family_title{@include center;bottom:7vh;
+      p{border-bottom:2px solid #fff;margin:auto;}
+    }
+  }
+  .lineup{@include lineup;}
+  .family_area_02{position:relative;z-index:10;width:100vw;background-color: #0E0D12;
+    @for $i from 1 to 4 {.fi_0#{$i}>li:nth-child(2){background-image: url("../img/family/"+$i+"_family.png")}}
+    .family_i>li:nth-child(2){background-size:cover;background-repeat:no-repeat;background-position:50% 50%;}
+  }
+}
+#productBox{min-height:640px;
+  li{transition:all 0.3s ease;
+    &.action{opacity:1;transform:scale(1.2);}
+  }
+  .pb_btn{@include center;z-index:100;width:100%;height:0;top:30%;
+    button{float:left;width:30px;height:30px;background-color:transparent;color:#1d1d1d;padding:0;
+      div{width:100%;height:100%;}
+      &.next{float:right;
+        div{@include bg("../img/arrow/arrow_right_black.png",50%,50%);}
+        &:hover div{@include bg("../img/arrow/arrow_right_hover.png",50%,50%);}
+      }
+      &.prev{
+        div{@include bg("../img/arrow/arrow_left_black.png",50%,50%);}
+        &:hover div{@include bg("../img/arrow/arrow_left_hover.png",50%,50%);}
+      }
+    }
+  }
+  li div:first-child{background-repeat:no-repeat;background-size:contain;background-position:0 0;}
+  .product_img{position:relative;
+    ul{position:absolute;z-index:100;left:0;width:100%;height:100%;background-color: #1d1d1d;display:none;
+      li{width:100%;height:20%;padding-top:8%;box-sizing:border-box;
+        a{@include link(50%,100%);text-align:center;color:#fff;font-size:1rem;}
+      }
+    }
+  }
+  a{color:#1d1d1d;}
+  @for $i from 1 to 9 {.product_img_0#{$i}{background-image:url("../img/product/product_0"+$i+".jpg")}}
+}
+#learnBox{
+  .learn_area{@include bg("../img/learnmore/learnmore_bg_01.jpg",50%,100%);width:100vw;height:100vw;
+    li{
+      >div{overflow:hidden;width:auto;height:auto;
+        .learn_img{position:relative;background-repeat:no-repeat;background-size:100%;background-position:50% 50%;transition:all 0.5s ease;
+          a{transition:all 0.5s ease;}
+          &:hover{transform:scale(1.1);}
+          &:hover a{background-color: #000;opacity:0.3;}
+        }
+      }
+    }
+    @for $i from 1 to 5 {.learn_img_0#{$i}{background-image:url("../img/learnmore/landrover_0"+$i+".jpg")}}
+    .lineup{@include lineup($c:#1d1d1d);}
+  }
+  .learn_bg{width:100vw;height:100vh;@include bg("../img/learnmore/learnmore_bg_02.png",50%,100%);}
+}
+#exploreBox{position:relative;background-color:#060606;color:#fff;text-align:center;
+  $count:4;
+  ul{position:relative;width:100%*$count;height:100%;
+    li{float:left;position:relative;width:100%/$count;height:100%;}
+  }
+  .ex_bg{background-size:cover;background-repeat:no-repeat;background-position:50% 50%;}
+  @for $i from 1 to 4 {.ex_bg_0#{$i}{background-image:url("../img/explore/explore_0"+$i+".jpg")}}
+  .lineup{@include lineup;@include center;}
+  @include indicator_square(".view_btn_area");
+  .ex_btn{@include center;z-index:100;width:50%;height:0;top:50%;
+    button{float:left;position:relative;width:30px;height:30px;background-color:transparent;color:#1d1d1d;padding:0;
+      div{width:100%;height:100%;}
+      &.next{float:right;
+        div{@include bg("../img/arrow/arrow_right.png",50%,50%);}
+        &:hover div{@include bg("../img/arrow/arrow_right_hover.png",50%,50%);}
+      }
+      &.prev{
+        div{@include bg("../img/arrow/arrow_left.png",50%,50%);}
+        &:hover div{@include bg("../img/arrow/arrow_left_hover.png",50%,50%);}
+      }
+    }
+  }
+}
+#dsMlBox{background-color:#060606;color:#fff;text-align:center;
+  div:nth-child(1){position:relative;width:100vw;height:100vw;@include bg("../img/dealership.png",50%,0);
+    &::before,&::before{content:"";display:block;position:absolute;z-index:-100;top:-100px;width:100%;height:150%;background-color: #060606;}
+  }
+  .lineup{@include center;@include lineup;}
+  .myL{
+    h3{border-bottom:1px solid #fff;}
+    a{color:#fff;
+      &:hover{color:#f89626;}
+    }
+  }
+}
+
+
+@include mobile;
+// -------------------------------------
+@include ipadmini;
+// -------------------------------------
+@include pc_default;
+// -------------------------------------
+@include pc_full;
+

@@ -1,0 +1,148 @@
+@mixin ipadmini {
+  @media screen and (min-width:768px) and (max-width:1279px) {
+    #headBox{height:80px;padding:20px 0;
+      .nav{width:92vw;height:auto;
+        h1{width:76px;height:40px;}
+        .unb{width:110px;height:100%;
+          li{margin-top:5px;height:30px;
+            &:nth-child(1){display:none;}
+            &:nth-child(2){width:30px;}
+            &:nth-child(3){width:36px;}
+          }
+          .menu_icon{width:36px;height:30px;}
+          .menu_icon span{width:36px;height:2px;}
+        }
+        .menu_page{
+          ul{top:200px;width:200px;}
+          li{a{margin-bottom:65px;}}
+        }
+      }
+    }//#headBox --------------------------
+    #viewBox{
+      li>div{
+        >p{position:absolute;top:140px;left:4vw;width:480px;height:auto;font-size:4.75rem;line-height:4rem;font-weight:bold;
+          & span:first-child{font-size:2.25rem;line-height:3.125rem;}
+          & span:nth-child(2){font-size:6rem;}
+        }
+      }
+      .view_02_text{h3{top:350px;}.lineup{top:440px;}}
+      .view_03_text{.lineup{top:510px;}}
+      .view_04_text{p{width:560px;}h3{width:1000px;}.lineup{top:540px;}}
+      h3{position:absolute;top:400px;left:4vw;width:580px;height:auto;font-size:1.25rem;}
+      .lineup{position:absolute;top:500px;left:4vw;}
+    }//viewBox --------------------------
+    #familyBox{
+      .family_title{width:274px;height:auto;
+        p{width:276px;height:auto;font-size:5rem;line-height:5rem;word-break:keep-all;font-weight:bold;
+          span{display:block;float:left;width:auto;height:auto;font-size:1.75rem;line-height:0.625rem;}
+        }
+      }
+      .family_area_02{height:1900px;
+        .family_i{position:relative;margin-bottom:180px;
+          li{position:relative;box-sizing:border-box;}
+          li:nth-child(1){margin-bottom:130px;padding-top:80px;
+            p{width:318px;text-align:center;font-size:3rem;margin:auto;line-height:2rem;word-break:keep-all;font-weight:bold;
+              span{display:block;text-align:right;font-size:1.25rem;}
+            }
+            h3{@include center;z-index:100;top:410px;color:#1d1d1d;text-align:center;font-size:1.125rem;}
+          }
+          li:nth-child(2){width:100%;height:286px;margin-top:-110px;margin-bottom:30px;}
+          .lineup{@include center;}
+        }
+        .fi_02{li:nth-child(1){p{width:279px;}}}
+        .fi_03{li:nth-child(1){p{width:265px;}}}
+      }
+      .f_img{opacity:0;top:80px;transition:all 1.8s ease;}
+      .family_i .f_img.action{opacity:1;top:0;}
+    }//familyBox --------------------------
+    @include productBox(302px,500px,416px,400px,264px);
+    #productBox{
+          li{
+            >div{margin-top:30px;
+              p:nth-child(1){font-size:1.5rem;white-space:nowrap;text-align:center;font-weight:bold;}
+              p:nth-child(2){margin-bottom:2.375rem;}
+              p:nth-child(2),h3{font-size:1rem;text-align:center;}
+            }
+            &:not(:nth-child(4)){opacity:0.5;}
+          }
+      @include indicator_bar(480px,60px,180px);
+      .bar{@include center;top:820px;}
+    }//#productBox --------------------------
+    $c:5;
+    #learnBox{position:relative;
+      ul{position:relative;width:100%*$c;height:100%;
+        li{float:left;position:relative;width:100%/$c;height:100%;padding:146px 32px 0;box-sizing:border-box;
+          div:first-child{width:400px;height:400px;margin:auto;margin-bottom:32px;
+            a{@include link;}
+          }
+          p{font-size:24px;white-space:nowrap;text-align:center;margin-bottom:54px;font-weight:bold;}
+          h3{font-size:1rem;text-align:center;}
+          .lineup{@include center;top:750px;}
+        }
+      }
+      @include indicator_bar(400px,100px,0);
+      .bar{@include center;top:720px;}
+    }//#learnBox --------------------------
+    #exploreBox{
+      >ul{padding-top:220px;box-sizing:border-box;
+        li{
+          .ex_bg{width:540px;height:300px;margin:auto;}
+          >p{font-size:1.75rem;margin:16px 0 12px;font-weight:bold;
+          span:first-child{font-size:3.125rem;}
+          span:last-child{text-transform:lowercase;}
+          }
+          h3{width:260px;font-size:1rem;margin:auto;font-weight:normal;word-break:keep-all;margin-bottom:60px;}
+          &:nth-child(3){h3{width:420px;}}
+        }
+      }
+      .ex_btn{width:86%;top:35%;
+        button{width:30px;height:30px;}
+      }
+    }//#exploreBox --------------------------
+    #dsMlBox{
+      //ds
+      .deal{width:100%;height:926px;
+        p{font-size:2.25rem;margin-bottom:28px;font-weight:bold;}
+        >h3{width:362px;font-size:18px;margin:auto;margin-bottom:63px;}
+        h4{font-size:1.375rem;margin:300px auto 40px;font-weight:bold;}
+      // ml
+        .myL{width:440px;height:200px;margin:auto;
+          ul{float:left;width:auto;height:auto;margin-right:20px;
+            li{width:auto;height:auto;margin-bottom:18px;
+              h3{width:115px;margin:auto;font-size:1rem;margin-bottom:18px;padding-bottom:3px;}
+              a{font-size:0.875rem;font-weight:normal;}
+            }
+            &:nth-child(2){h3{width:88px;}}
+            &:nth-child(3){h3{width:84px;}}
+          }
+        }
+      }
+    }//#dsMlBox --------------------------
+    #footBox{height:486px;padding:50px 164px 0;box-sizing:border-box;
+      .ci_area{font-size:11px;text-align:center;
+        dl{width:33.333333%;height:auto;line-height:2.8125rem;
+          &:first-child{margin-right:48px;}
+          &:last-child{@include right(50px,210px);}
+        }
+        dd{display:none;}
+      }
+      .copyright_area{width:100%;height:auto;
+        ul:first-child{@include center;top:50px;width:33.333333%;font-size:0.6875rem;text-align:center;
+          li{line-height:2.8125rem;width:100%;}
+          i{text-indent:0.5rem;}
+        }
+        .sns{@include center;bottom:122px;width:134px;height:30px;
+          li{float:left;width:30px;height:100%;margin-right:22px;
+            &:nth-child(2){@include center;top:4.5px;}
+            &:nth-child(3){float:right;margin-right:0;}
+            a{@include link;}
+          }
+        }
+        .copy{@include center;width:500px;bottom:60px;font-size:0.625rem;
+          span{display:block;}
+        }
+        p:last-child{display:none;}
+      }
+    }//footBox --------------------------
+  }
+}

@@ -1,0 +1,112 @@
+@import "../_basic/mixin"; // mixin -------------------------------
+
+
+@include pc_full{
+
+  .left_text{@include left(256px,16%);
+    li:nth-child(1){font-size:3.375rem;font-weight:bold;margin-bottom:38px; span{font-size:4.25rem;}}
+    li:nth-child(2){width:320px;margin-bottom:46px;word-break:keep-all;font-weight:bold;}
+  }
+
+  #viewBox{
+    .view_text{
+      >p:first-child{position:absolute;top:140px;left:13vw;width:520px;height:auto;font-size:80px;line-height:4.375rem;font-weight:bold;
+        & span:first-child{font-size:32px;line-height:3.125rem;}
+        &>span:nth-child(2){font-size:6.25rem;}
+      }
+      .sub_text{position:absolute;top:400px;left:13vw;width:700px;height:auto;font-size:1.75rem;}
+    }
+    .lineup{position:absolute;top:500px;left:13vw;}
+    .view_text_02{position:absolute;left:13vw;width:400px;height:auto;top:600px;
+      p{font-size:1.25rem;}
+    }
+    .down_arrow{@include center;z-index:1000;top:95%;width:35px;height:35px;@include bg("../img/arrow/arrow_down.png",50%,50%);
+      a{@include link;}
+    }
+  }//viewBox --------------------------
+  #specBox{height:2900px;padding-top:72px;
+    .fix_menu{top:50%;transform:translateY(-50%);right:0;width:200px;height:300px;background-color:rgba(0,0,0,0.5);padding:12px;
+      ul{width:100%;height:100%;
+        li{width:100%;height:16%;margin-bottom:6px;
+          a{font-size:1rem;color:#fff;
+            p{float:left;width:134px;text-align:right;}
+            div{float:right;width:50px;height:2px;background-color:#fff;margin-top:11px;}
+          }
+          &::last-child{margin-bottom:0;}
+        }
+      }
+    }
+    .list_01{
+      ul{margin-bottom:152px;
+        li{width:auto;height:auto;margin-right:120px;font-size:1.5rem;
+          &:last-child{margin-right:0;}
+        }
+      }
+    }
+    .list_02{width:1600px;height:166px;margin:auto;margin-bottom:162px;
+      dl{
+        dt{width:auto;font-size:1.5rem;margin-bottom:50px;font-weight:bold;transition:all 1s ease;}
+        dd{font-size:1rem;transition:all 1s ease;}
+        &:not(:first-child){border-left:1px solid #fff;box-sizing:border-box;}
+        
+      }
+    }
+    .spec_first{height:358px;padding-top:112px;margin-bottom:110px;
+      p{width:1300px;height:auto;font-size:40px;}
+    }
+    h2{font-size:3.125rem;width:196px;height:auto;margin:auto;margin-bottom:140px;}
+    .list_03{width:1390px;height:1466px;
+      .spec_img{float:left;width:100%;
+        >li{width:660px;height:716px;margin-bottom:90px;
+          ul{
+            li:nth-child(1){width:660px;height:437px;margin-bottom:20px;}
+            li:nth-child(2){width:100%;height:auto;
+              p{width:auto;height:auto;font-size:2.375rem;text-align:center;margin-bottom:34px;}
+            }
+            li:nth-child(3){width:420px;height:72px;margin:auto;margin-bottom:62px;font-size:1rem;text-align:center;word-break:keep-all;}
+            .lineup{margin:auto;margin-bottom:80px;}
+          }
+          &:nth-child(2n-1){margin-right:70px;}
+          &:nth-child(4){
+            li:last-child>div{width:232px;}
+          }
+        }
+      }
+    }
+  }//specBox --------------------------
+
+  #duraBox{height:1080px;
+    h2{top:80px;left:100px;font-size:3.125rem;}
+  }
+  #dirivingBox{height:1080px;
+    h2{top:80px;left:100px;font-size:3.125rem;}
+  }
+  #designBox{height:1080px;
+    h2{top:80px;left:100px;font-size:3.125rem;}
+  }
+  #incarBox{height:1080px;
+    h2{top:80px;left:100px;font-size:3.125rem;}
+  }
+  #acceBox{height:2830px;
+    h2{top:80px;left:100px;font-size:3.125rem;}
+    >p{width:608px;height:198px;font-size:1.5rem;
+      span{font-size:2.625rem;}
+    }
+    >ul{width:1288px;height:2254px;
+      >li{width:100%;height:436px;margin-bottom:168px;
+        >ul{width:auto;height:100%;
+          >li:first-child{width:660px;height:100%;}
+          >li:nth-child(2){font-size:2.5rem;margin-bottom:38px;}
+          >li:nth-child(3){font-size:1rem;margin-bottom:64px;}
+          >li:not(:first-child){width:572px;height:auto;margin-left:54px;word-break:keep-all;}
+        }
+      }
+    }
+    >div:last-child{@include center;bottom:140px;width:232px;background-color:#fff;a{color:#1d1d1d;font-weight:bold;}}
+  }
+  #choiceBox{height:1080px;padding-top:110px;
+    h2{font-size:2.5rem;margin-bottom:34px;}
+    div{font-size:1rem;margin-bottom:68px;}
+    .lineup{@include center;@include lineup_black;background-color:#1d1d1d;a{color:#fff;font-weight:normal;}}
+  }
+}

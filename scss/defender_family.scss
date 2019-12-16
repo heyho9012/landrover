@@ -1,0 +1,113 @@
+// defender_family.scss
+/* defender_family.css */
+
+@import "_temp/header";
+@import "_temp/footer";
+@import "_temp/head_foot";
+// -------------------------------------------------------------
+@import "_temp/sub_fdefender_pc1920";
+// -------------------------------------------------------------
+@import "_basic/mixin";
+
+.play{@include img_cen;width:80px;height:92px;background-color:transparent;@include bg("../img/arrow/play_btn.png",cover,50%,50%);padding:0;
+  &:hover{background-color:transparent;}
+  &:focus{background-color:transparent;}
+  &:active{background-color:transparent;}
+}
+
+#headBox.action{height:60px;padding-top:10px;background-color:rgba(11, 13, 16,0.5);}
+// headBox -----------------------------------------------------------------------------
+#viewBox{position:relative;min-height:640px;
+  &:before,&::before{content:"";display:block;position:absolute;z-index:500;width:100%;height:100%;background-color:rgba(29,29,29,0.5);}
+  $count:3;
+  ul{position:relative;width:100%*$count;height:100%;
+    li{float:left;width:100%/$count;height:100%;background-size:cover;background-repeat:no-repeat;background-position:70% 0;overflow:hidden;word-break:break-all;
+      .view_text{position:absolute;z-index:1000;color:#fff;}
+      .videoBg{position:absolute;z-index:-500;background-position: 50% 50%;}
+    }
+    @for $i from 2 to 4 {.view_0#{$i}_bg{background-image:url("../img/sub_fdefender/view/view_0"+$i+".jpg")}}
+  }
+  .lineup{@include lineup;}
+  @include indicator_square(".view_btn_area");
+}
+// viewBox -----------------------------------------------------------------------------
+#specBox{background-color:#060606;color:#fff;.lineup{@include lineup;}
+  .fix_menu{position:fixed;z-index:2000;
+    li:hover{a{color:#f89626;}div{background-color:#f89626;}}
+    a{@include link;}
+  }
+  @include spec_list_01(53.2%);
+  .list_02{
+    dl{float:left;width:25%;height:100%;text-align:center;
+      dt{width:100%;height:auto;a{@include link;color:#fff;}
+        &:hover{a{color:#02512D;}&+dd{color:#02512D;}
+      }
+    }
+      dd{width:100%;height:auto;}
+    }
+  }
+  .spec_first{position:relative;box-sizing:border-box;width:100%;@include bg("../img/sub_fdefender/spec/spec_first.jpg",50%,50%);@include beforeBox;
+    p{@include center;color:#fff;line-height:1;}
+  }
+  h2{text-align:center;border-bottom:1px solid #fff;}
+  .list_03{margin:auto;
+    .spec_img{width:100%;
+      >li{float:left;
+        &:nth-child(2n){margin-right:0;}
+        ul{@for $i from 1 to 5{.img_0#{$i}{background-image:url("../img/sub_fdefender/spec/spec_0"+$i+".jpg")}}}
+          li{
+            &:first-child{background-size:cover;background-repeat:no-repeat;background-position:50% 50%;
+          }
+        }
+      }
+    }
+  }
+}
+// specBox -------------------------------------------------------------------------------
+#duraBox{position:relative;width:100%;@include bg("../img/sub_fdefender/durability/dura_01.jpg",50%,0);
+  @include vertical_h2;
+  .lineup{@include lineup_black;background-color:#1d1d1d;a{color:#fff;font-weight:normal;}}
+}
+
+// duraBox --------------------------------------------------------------------------------
+#dirivingBox{position:relative;@include bg("../img/sub_fdefender/driving/driving_01.jpg",50%,50%);
+  @include beforeBox;
+  @include vertical_h2(#ffffff);
+  .lineup{@include lineup;}
+  .left_text{color:#fff;}
+}
+// dirivingBox --------------------------------------------------------------------------------
+#designBox{position:relative;@include bg("../img/sub_fdefender/design/design_01.jpg",50%,50%);
+  @include vertical_h2;
+  .lineup{@include lineup_black;background-color:#1d1d1d;a{color:#fff;font-weight:normal;}}
+}
+// designBox --------------------------------------------------------------------------------
+#incarBox{position:relative;@include bg("../img/sub_fdefender/incar/incar_01.jpg",50%,50%);
+  @include beforeBox;
+  @include vertical_h2(#ffffff);
+  .lineup{@include lineup;width:232px;}
+  .left_text{color:#fff;}
+}
+// incarBox --------------------------------------------------------------------------------
+#acceBox{position:relative;padding-top:102px;box-sizing:border-box;background-color:#060606;
+  @include vertical_h2(#ffffff);
+  .lineup{@include lineup;}
+  >p{color:#fff;text-align:center;margin:auto;}
+  >ul{color:#fff;margin:auto;
+    >li{width:100%;
+      >ul{width:100%;background-repeat:no-repeat;background-size:cover;background-position:50% 50%;
+        @for $i from 1 to 5{.acce_img_0#{$i}{background-image:url("../img/sub_fdefender/accessory/acce_0"+$i+".jpg")}
+        >li{float:left;}}}
+    }
+  }
+}
+// acceBox --------------------------------------------------------------------------------
+#choiceBox{position:relative;box-sizing:border-box;@include bg("../img/sub_fdefender/choice_01.jpg",50%,50%);
+  h2{text-align:center;}
+  div{text-align:center;}
+  .lineup{@include lineup_black;background-color:#1d1d1d;a{color:#fff;font-weight:normal;}}
+}
+@include mobile;
+@include ipadmini;
+@include pc_default;
+@include pc_full;

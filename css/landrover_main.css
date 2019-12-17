@@ -173,17 +173,17 @@ button div:hover { transform: scale(2); }
 
 #productBox .pb_btn button { float: left; width: 30px; height: 30px; background-color: transparent; color: #1d1d1d; padding: 0; }
 
-#productBox .pb_btn button div { width: 100%; height: 100%; }
+#productBox .pb_btn button span { display: block; width: 100%; height: 100%; }
 
 #productBox .pb_btn button.next { float: right; }
 
-#productBox .pb_btn button.next div { background-image: url("../img/arrow/arrow_right_black.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#productBox .pb_btn button.next span { background-image: url("../img/arrow/arrow_right_black.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
-#productBox .pb_btn button.next:hover div { background-image: url("../img/arrow/arrow_right_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#productBox .pb_btn button.next:hover span { background-image: url("../img/arrow/arrow_right_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
-#productBox .pb_btn button.prev div { background-image: url("../img/arrow/arrow_left_black.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#productBox .pb_btn button.prev span { background-image: url("../img/arrow/arrow_left_black.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
-#productBox .pb_btn button.prev:hover div { background-image: url("../img/arrow/arrow_left_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#productBox .pb_btn button.prev:hover span { background-image: url("../img/arrow/arrow_left_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
 #productBox li div:first-child { background-repeat: no-repeat; background-size: contain; background-position: 0 0; }
 
@@ -285,17 +285,17 @@ button div:hover { transform: scale(2); }
 
 #exploreBox .ex_btn button { float: left; position: relative; width: 30px; height: 30px; background-color: transparent; color: #1d1d1d; padding: 0; }
 
-#exploreBox .ex_btn button div { width: 100%; height: 100%; }
+#exploreBox .ex_btn button span { display: block; width: 100%; height: 100%; }
 
 #exploreBox .ex_btn button.next { float: right; }
 
-#exploreBox .ex_btn button.next div { background-image: url("../img/arrow/arrow_right.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#exploreBox .ex_btn button.next span { background-image: url("../img/arrow/arrow_right.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
-#exploreBox .ex_btn button.next:hover div { background-image: url("../img/arrow/arrow_right_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#exploreBox .ex_btn button.next:hover span { background-image: url("../img/arrow/arrow_right_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
-#exploreBox .ex_btn button.prev div { background-image: url("../img/arrow/arrow_left.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#exploreBox .ex_btn button.prev span { background-image: url("../img/arrow/arrow_left.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
-#exploreBox .ex_btn button.prev:hover div { background-image: url("../img/arrow/arrow_left_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
+#exploreBox .ex_btn button.prev:hover span { background-image: url("../img/arrow/arrow_left_hover.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; }
 
 #dsMlBox { background-color: #060606; color: #fff; text-align: center; }
 

@@ -44,7 +44,7 @@
             p{width:318px;text-align:center;font-size:3rem;margin:auto;line-height:2rem;word-break:keep-all;font-weight:bold;
               span{display:block;text-align:right;font-size:1.25rem;}
             }
-            h3{@include center;z-index:100;top:410px;color:#1d1d1d;text-align:center;font-size:1.125rem;}
+            h3{@include center;z-index:100;top:410px;color:#1d1d1d;text-align:center;font-size:1.125rem;font-weight:bold;}
           }
           li:nth-child(2){width:100%;height:286px;margin-top:-110px;margin-bottom:30px;}
           .lineup{@include center;}
@@ -83,7 +83,7 @@
       @include indicator_bar(400px,100px,0);
       .bar{@include center;top:720px;}
     }//#learnBox --------------------------
-    #exploreBox{
+    #exploreBox{min-height:1024px;
       >ul{padding-top:220px;box-sizing:border-box;
         li{
           .ex_bg{width:540px;height:300px;margin:auto;}

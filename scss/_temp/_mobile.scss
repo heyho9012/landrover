@@ -120,14 +120,14 @@
         }
       }
     }//#dsMlBox --------------------------
-    #footBox{position:relative;height:640px;padding:3.125rem 6rem 0;box-sizing:border-box;
-      .ci_area{float:left;width:142px;height:346px;font-size:0.6875rem;text-align:center;
+    #footBox{position:relative;min-width:380px;height:640px;padding:3.125rem 0 0;box-sizing:border-box;
+      .ci_area{position:absolute;right:50%;width:142px;height:346px;font-size:0.6875rem;text-align:center;
         dl{float:right;width:100%;line-height:3.125rem;}
         dd{display:none;}
       }
     }
       .copyright_area{width:100%;height:100%;
-        ul:first-child{float:right;font-size:0.6875rem;
+        ul:first-child{position:absolute;left:60%;font-size:0.6875rem;
           li{line-height:3.125rem;}
           i{text-indent:0.5rem;}
         }

@@ -1,5 +1,6 @@
 @mixin mobile {
   @media screen and (max-width:767px) {
+    #wrap{min-width:380px;}
     #headBox{height:80px;padding:20px 0;
       .nav{width:95vw;height:100%;
         h1{width:76px;height:40px;}
@@ -18,7 +19,7 @@
         }
       }
     }//#headBox --------------------------
-    #viewBox{
+    #viewBox{min-width:380px;
       li>div{
         >p{position:absolute;top:140px;left:2.5vw;width:300px;height:auto;font-size:2.75rem;line-height:2.75rem;font-weight:bold;word-break:keep-all;
           & span:first-child{font-size:1.5625rem;}
@@ -44,7 +45,7 @@
             p{width:210px;text-align:center;font-size:2rem;margin:auto;line-height:1.2rem;word-break:keep-all;font-weight:bold;
               span{display:block;text-align:right;font-size:0.75rem;}
             }
-            h3{@include center;z-index:100;top:210px;color:#1d1d1d;text-align:center;font-size:0.75rem;}
+            h3{@include center;z-index:100;top:210px;width:220px;color:#1d1d1d;text-align:center;font-size:0.75rem;font-weight:bold;}
           }
           li:nth-child(2){width:100%;height:178px;margin-top:-110px;margin-bottom:30px;}
           .lineup{@include center;}
@@ -58,58 +59,59 @@
     @include productBox(150px,100%,340px,62.5%,198px);
     #productBox{
       li{
-          >div{margin-bottom:30px;
+          >div{margin-bottom:1.875rem;
             p:nth-child(1){font-size:1.25rem;white-space:nowrap;text-align:center;font-weight:bold;}
             p:nth-child(2){margin-bottom:2.375rem;}
             p:nth-child(2),h3{font-size:1rem;text-align:center;}
           }
       }
       @include indicator_bar($w:360px);
-      .bar{@include center;top:520px;}
-      .pb_btn{width:88%;}
+      .bar{@include center;top:32.5rem;}
+      .pb_btn{width:88%;top:4.25rem}
     }//#productBox --------------------------
     $c:5;
     #learnBox{position:relative;
       ul{position:relative;width:100%*$c;height:100%;
-        li{float:left;position:relative;width:100%/$c;height:100%;padding:74px 32px 0;box-sizing:border-box;
-          div:first-child{width:300px;height:300px;margin:auto;margin-bottom:32px;
+        li{float:left;position:relative;width:100%/$c;height:100%;padding:4.625rem 2rem 0;box-sizing:border-box;
+          div:first-child{width:300px;height:300px;margin:auto;margin-bottom:2rem;
             a{@include link;}
           }
-          p{font-size:24px;white-space:nowrap;text-align:center;margin-bottom:54px;font-weight:bold;}
+          p{font-size:24px;white-space:nowrap;text-align:center;margin-bottom:3.375rem;font-weight:bold;}
           h3{font-size:1rem;text-align:center;}
-          .lineup{@include center;top:548px;}
+          .lineup{@include center;top:34.25rem;}
         }
       }
-      @include indicator_bar(400px,25%,0);
-      .bar{@include center;top:472px;}
+      @include indicator_bar(360px,25%,0);
+      .bar{@include center;top:29.5rem;}
     }//#learnBox --------------------------
-    #exploreBox{
-      ul{padding-top:116px;box-sizing:border-box;
+    #exploreBox{min-height:640px;
+      ul{padding-top:7.25rem;box-sizing:border-box;
         li{
           .ex_bg{width:300px;height:166px;margin:auto;}
-          >p{font-size:1.75rem;margin-bottom:22px;font-weight:bold;
+          >p{font-size:1.75rem;margin-bottom:1.375rem;font-weight:bold;
             span:first-child{font-size:3.125rem;}
             span:last-child{text-transform:lowercase;}
           }
-          &:nth-child(3) h3{width:400px;word-break:keep-all;margin-bottom:32px;}
-          h3{width:260px;margin:auto;font-size:0.75rem;font-weight:normal;margin-bottom:32px;}
+          &:nth-child(3) h3{width:400px;word-break:keep-all;margin-bottom:2rem;}
+          h3{width:260px;margin:auto;font-size:0.75rem;font-weight:normal;margin-bottom:2rem;}
         }
       }
-      .ex_btn{width:82%;top:30%;
-        button{width:20px;height:20px;}
+      .ex_btn{width:348px;top:30%;
+        button{width:24px;height:24px;}
       }
+      .ex_btn_area{bottom:2.5rem;}
     }//#exploreBox --------------------------
     #dsMlBox{
       //ds
       .deal{width:100%;height:926px;
-        p{font-size:1.625rem;margin-bottom:28px;font-weight:bold;}
-        >h3{width:280px;font-size:0.875rem;margin:auto;margin-bottom:63px;}
-        h4{font-size:1.375rem;margin:266px auto 40px;font-weight:bold;}
+        p{font-size:1.625rem;margin-bottom:1.75rem;font-weight:bold;}
+        >h3{width:280px;font-size:0.875rem;margin:auto;margin-bottom:3.9375rem;}
+        h4{font-size:1.375rem;margin:16.625rem auto 2.5rem;font-weight:bold;}
       // ml
         .myL{
           ul{width:auto;height:auto;
-            li{width:auto;height:auto;margin-bottom:18px;
-              h3{width:115px;margin:auto;font-size:1rem;margin-bottom:18px;padding-bottom:3px;}
+            li{width:auto;height:auto;margin-bottom:1.125rem;
+              h3{width:115px;margin:auto;font-size:1rem;margin-bottom:1.125rem;padding-bottom:0.1875rem;}
               a{font-size:0.75rem;font-weight:normal;}
             }
             &:nth-child(2){h3{width:88px;}}
@@ -118,7 +120,7 @@
         }
       }
     }//#dsMlBox --------------------------
-    #footBox{position:relative;height:640px;padding:50px 96px 0;box-sizing:border-box;
+    #footBox{position:relative;height:640px;padding:3.125rem 6rem 0;box-sizing:border-box;
       .ci_area{float:left;width:142px;height:346px;font-size:0.6875rem;text-align:center;
         dl{float:right;width:100%;line-height:3.125rem;}
         dd{display:none;}
@@ -130,13 +132,13 @@
           i{text-indent:0.5rem;}
         }
         .sns{@include center;bottom:156px;width:134px;height:30px;
-          li{float:left;width:30px;height:100%;margin-right:22px;
+          li{float:left;width:30px;height:100%;margin-right:1.375rem;
             &:nth-child(2){@include center;top:4px;}
             &:nth-child(3){float:right;margin-right:0;}
             a{@include link;}
           }
         }
-        .copy{@include center;bottom:60px;font-size:0.625rem;
+        .copy{@include center;bottom:3.75rem;font-size:0.625rem;
           span{display:block;}
         }
         p:last-child{display:none;}

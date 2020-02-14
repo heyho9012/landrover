@@ -606,8 +606,8 @@ button div:hover { transform: scale(2); }
   #productBox .bar div { position: absolute; z-index: 500; top: -2.5px; margin-left: 375px; width: 125px; height: 5px; background-color: #1d1d1d; }
   #productBox .bar { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; top: 700px; }
   #learnBox { position: relative; }
-  #learnBox .learn_area { height: 1980px; padding: 180px 194px; box-sizing: border-box; }
-  #learnBox ul { position: relative; width: 100%; height: 100%; }
+  #learnBox .learn_area { width: 100%; height: 1980px; padding: 180px 194px; box-sizing: border-box; }
+  #learnBox ul { position: relative; width: 892px; height: 100%; left: 50%; transform: translateX(-50%); }
   #learnBox ul li { width: 400px; height: auto; }
   #learnBox ul li div:first-child { width: 400px; height: 400px; margin-bottom: 28px; }
   #learnBox ul li div:first-child a { display: block; width: 100%; height: 100%; }
@@ -738,8 +738,8 @@ button div:hover { transform: scale(2); }
   #productBox .bar div { position: absolute; z-index: 500; top: -2.5px; margin-left: 375px; width: 125px; height: 5px; background-color: #1d1d1d; }
   #productBox .bar { position: absolute; left: 50%; transform: translateX(-50%); text-align: center; top: 700px; }
   #learnBox { position: relative; }
-  #learnBox .learn_area { width: 1420px; height: 2660px; margin: auto; }
-  #learnBox ul { position: relative; width: 100%; height: 100%; }
+  #learnBox .learn_area { width: 100%; height: 2660px; margin: auto; }
+  #learnBox ul { position: relative; width: 1420px; height: 100%; left: 50%; transform: translateX(-50%); }
   #learnBox ul li { width: 660px; height: auto; margin-bottom: 300px; }
   #learnBox ul li div:first-child { width: 660px; height: 660px; margin-bottom: 28px; }
   #learnBox ul li div:first-child a { display: block; width: 100%; height: 100%; }

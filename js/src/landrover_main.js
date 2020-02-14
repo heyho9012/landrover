@@ -119,7 +119,7 @@
                 j=0;
                 viewUl.css({left:100+'%'});
             }
-            viewUl.animate({left:-100 * j+'%'},1200, function(){
+            viewUl.animate({left:-100 * j+'%'},2000, function(){
             });
             indiLi.eq(j).addClass('action',1000);
             indiLi.eq(j).siblings().removeClass('action'); 

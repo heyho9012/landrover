@@ -101,7 +101,7 @@ article{width:100%;box-sizing:border-box;}
 }
 // techBox -----------------------------------------------------------------------------
 
-#perf_01_Box{position:relative;
+#perf_01_box{position:relative;
   @include bg("../img/sub_frangerover/per/per_01.png",50%,50%,contain);
   @include list_01(42.8%,#1d1d1d);
   @include vertical_h2;
@@ -113,13 +113,17 @@ article{width:100%;box-sizing:border-box;}
   }
 }
 // perf_01_Box -----------------------------------------------------------------------------
+#perf_02_box {
+  position: relative;
+}
+// perf_02_Box -----------------------------------------------------------------------------
 #offloadBox{position:relative;
   @include bg("../img/sub_frangerover/off/off_01.png",50%,50%);
   @include list_01(32.8%,#1d1d1d,#02512D);
   @include vertical_h2;
   .lineup{@include lineup_black;background-color:#1d1d1d;a{color:#fff;}}
 }
-// perf_02_Box -----------------------------------------------------------------------------
+// offload_box -----------------------------------------------------------------------------
   #modelBox{position:relative;.lineup{@include lineup;}
   @include vertical_h2(#fff);
     .model_area_01{position:absolute;top:0;width:100%;height:50%;background-color:#060606;color:#fff;box-sizing:border-box;
